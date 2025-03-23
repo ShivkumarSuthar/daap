@@ -1,0 +1,20 @@
+@font-face {
+    font-family:Dosis ;
+    src: url('../../public/font/Dosis/Dosis-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:Poller_One ;
+    src: url('../../public/font/Poller_One/PollerOne-Regular.ttf');
+}
+@font-face {
+    font-family:Quicksand ;
+    src: url('../../public/font/Quicksand/Quicksand-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:hertical ;
+    src: url('../../public/font/Hertical\ Sans.ttf');
+}
+@font-face {
+    font-family:arthead ;
+    src: url('../../public/font/Arthead-Regular.b91780a9.otf');
+}

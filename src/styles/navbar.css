@@ -1,0 +1,10 @@
+@media screen and (min-width: 1440px) {
+    .nav-menu-wrap {
+        flex: 1;
+    }
+}
+
+.w-nav-menu {
+    float: right;
+    position: relative;
+}

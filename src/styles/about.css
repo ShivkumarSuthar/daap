@@ -1,0 +1,119 @@
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .tech__wrapper,.why__wrapper,.faq__wrapper{
+        padding: 20px 20px !important;
+    }
+    .wrapper__heading{
+        font-size: 20px !important;
+    }
+    .section__title{
+        font-size: 20px !important;
+    }
+
+
+
+    /* about */
+    .about__page{
+        padding: 20px !important;
+    }
+    .page__tittle{
+        width: 140px !important;
+        height: 30px !important;
+        padding: 5px 10px !important;
+        gap: 5px !important;
+    }
+    .about__page__section{
+        padding: 20px 20px !important;
+    }
+    .page__tittle h1{
+        font-size: 12px !important;
+    }
+    .page__tittle .page__icon{
+        height: 10px !important;
+    }
+    .lead__text{
+        margin: 0px !important;
+        padding: 20px 0 !important;
+        font-size: 22px !important;
+    }
+    .about__content{
+        max-width: 100% !important;
+    }
+    .about__content p{
+        font-size: 15px !important;
+    }
+    .wrapper__main{
+
+    }
+
+
+    /* service */
+    .services-section{
+        padding-top: 0 !important;
+    }
+    .service__page__head{
+        padding-top: 20px !important;
+    }
+
+
+    /* tech  */
+    .tech__wrapper{
+
+    }
+    .tech-box{
+        padding: 12px !important;
+    }
+
+    /* why  */
+    .why__wrapper{
+        padding: 10px 20px !important;
+        margin: 0 !important;
+    }
+    .why__content{
+        margin-top: 0 !important;
+        padding: 15px !important;
+        border-radius: 30px !important;
+    }
+    .section__heading{
+        font-size: 22px !important;
+        margin: 0 !important;
+    }
+    .image__container {
+        display: none !important;
+    }
+    .faq__wrapper{
+        height: 100% !important;
+    }
+    .get__quote{
+        display: none !important; 
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .hero__container {
+        padding: 15px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .hero__container {
+        padding: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hero__container {
+        padding: 30px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero__container {
+        padding: 40px;
+    }
+}
