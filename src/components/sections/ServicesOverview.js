@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { COMPANY_INFO } from "../common/constant";
 import { FiUsers } from "react-icons/fi";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -13,7 +14,7 @@ export default function Services() {
             <h1>Services</h1>
           </span>
 
-          <h2 className="fw-bold text-dark">We Offer a Comprehensive Range of Services to Meet Your Needs</h2>
+          <h2 className="service_section__heading">We Offer a Comprehensive Range of Services to Meet Your Needs</h2>
         </div>
 
         {/* Services Grid */}
@@ -21,7 +22,7 @@ export default function Services() {
           {COMPANY_INFO.services.map((service) => (
             <div key={service.id} className="col-md-6 col-lg-4">
               <Link href={`/services/${service.id}`} className="service-card d-block">
-                <div className="icon">{service.icon}</div>
+                <Image src={service.image} className="icon" alt='services' width={100} height={100} />
                 <h3 className="fw-bold">{service.title}</h3>
                 <p>{service.description}</p>
               </Link>

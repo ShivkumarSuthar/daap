@@ -18,3 +18,11 @@
     font-family:arthead ;
     src: url('../../public/font/Arthead-Regular.b91780a9.otf');
 }
+@font-face {
+    font-family:SalosendoPersonalUse ;
+    src: url('../../public/font/SalosendoPersonalUse-Regular.ttf');
+}
+@font-face {
+    font-family:SoerinaPersonalUse ;
+    src: url('../../public/font/SoerinaPersonalUse-Regular.ttf');
+}

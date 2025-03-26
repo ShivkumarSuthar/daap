@@ -49,14 +49,14 @@ const WhyChooseUs = () => {
                             className="point"
                             onMouseEnter={() => setCurrentImage(images.client)}
                         >
-                            <h4>03. Client-Centric Approach</h4>
+                            <h4>03. Customer Focused</h4>
                             <p>We prioritize performance, security, and scalability tailored to client needs.</p>
                         </div>
                         <div
                             className="point"
                             onMouseEnter={() => setCurrentImage(images.quality)}
                         >
-                            <h4>04. High-Quality Deliverables</h4>
+                            <h4>04. Premium Results</h4>
                             <p>We maintain the highest standards, ensuring every project is delivered with precision and quality.</p>
                         </div>
                         <div

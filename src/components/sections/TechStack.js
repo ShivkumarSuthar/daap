@@ -1,39 +1,96 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { COMPANY_INFO } from "../common/constant";
+  import React, { useState, useEffect, useRef } from 'react';
+  import Image from 'next/image';
+  import { COMPANY_INFO } from '../common/constant';
+  import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const TechStackSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState(COMPANY_INFO.TECH_CATEGORIES[0]);
+  const TechStackSection = () => {
+    const [selectedCategory, setSelectedCategory] = useState(COMPANY_INFO.TECH_CATEGORIES[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const categoryListRef = useRef(null);
 
-  return (
-    <section className="tech__wrapper">
-      <h2 className="wrapper__heading">Cutting-Edge Technologies Powering Next-Gen Applications</h2>
+  // Auto-scroll effect without moving the page
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex + 1) % COMPANY_INFO.TECH_CATEGORIES.length
+      );
+    }, 3000);
 
-      <div className="row tech__inner__wrapper m-0 p-0">
-        {/* Sidebar */}
-        <div className="col-md-3 p-0">
-          <div className="list-group">
-            {COMPANY_INFO.TECH_CATEGORIES.map((category) => (
-              <button
-                key={category}
-                className={`list-group-item list-group-item-action ${selectedCategory === category ? "active" : ""}`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
+    return () => clearInterval(timer);
+  }, []);
+
+  // Update category without scrolling the page
+  useEffect(() => {
+    setSelectedCategory(COMPANY_INFO.TECH_CATEGORIES[currentIndex]);
+
+    // Keep selected category in view without scrolling the page
+    if (categoryListRef.current) {
+      const buttons = categoryListRef.current.querySelectorAll('.category-button');
+      // if (buttons[currentIndex]) {
+      //   buttons[currentIndex].scrollIntoView({
+      //     behavior: 'smooth',
+      //     block: 'nearest',
+      //     inline: 'center',
+      //   });
+      // }
+    }
+  }, [currentIndex]);
+
+  // Manual navigation
+  const navigateCategory = (direction) => {
+    const newIndex = direction === 'left'
+      ? (currentIndex - 1 + COMPANY_INFO.TECH_CATEGORIES.length) % COMPANY_INFO.TECH_CATEGORIES.length
+      : (currentIndex + 1) % COMPANY_INFO.TECH_CATEGORIES.length;
+
+    setCurrentIndex(newIndex);
+  };
+
+    return (
+      <section className="tech-stack-section">
+        <h2 className="section-title">
+          Cutting-Edge Technologies Powering Next-Gen Applications
+        </h2>
 
         {/* Tech Stack Display */}
-        <div className="col-md-9" style={{paddingLeft:'20px'}}>
-          <div className="row row-cols-2 row-cols-md-4 g-3 m-0 p-0">
+        <div className="tech-stack-content">
+          {/* Mobile Category Carousel */}
+          <div className="mobile-category-carousel">
+            <button
+              className="nav-button nav-left"
+              onClick={() => navigateCategory('left')}
+            >
+              <FaChevronLeft />
+            </button>
+
+            <div
+              className="category-container"
+              ref={categoryListRef}
+            >
+              {COMPANY_INFO.TECH_CATEGORIES.map((category, index) => (
+                <button
+                  key={category}
+                  className={`category-button ${index === currentIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentIndex(index)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            <button
+              className="nav-button nav-right"
+              onClick={() => navigateCategory('right')}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+          <div className="tech-grid">
             {[
-              ...(COMPANY_INFO.TECH_STACK[selectedCategory] || []), // Existing tech items
-              ...Array(8 - (COMPANY_INFO.TECH_STACK[selectedCategory]?.length || 0)).fill(null), // Fill empty slots
+              ...(COMPANY_INFO.TECH_STACK[selectedCategory] || []),
+              ...Array(8 - (COMPANY_INFO.TECH_STACK[selectedCategory]?.length || 0)).fill(null),
             ].map((tech, index) => (
-              <div key={index} className="col text-center">
-                <div className={`tech-box ${!tech ? "placeholder" : ""}`}>
+              <div key={index} className="tech-item">
+                <div className={`tech-box ${!tech ? 'placeholder' : ''}`}>
                   {tech ? (
                     <>
                       <Image
@@ -53,9 +110,8 @@ const TechStackSection = () => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };
 
-export default TechStackSection;
+  export default TechStackSection;

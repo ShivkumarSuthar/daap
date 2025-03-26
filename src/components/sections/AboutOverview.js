@@ -32,7 +32,7 @@ export default function About() {
                       <p>{COMPANY_INFO.aboutSection.description[0]}</p>
                       <p>{COMPANY_INFO.aboutSection.description[1]}</p>
                     </div>
-                    <Link href="/read-more" className="btn btn__read__more mt-4">
+                    <Link href="/read-more" className="btn btn__read__more">
                       Read More <HiArrowUpRight className="btn__icon" />
                     </Link>
                   </div>

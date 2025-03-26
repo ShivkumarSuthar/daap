@@ -45,37 +45,43 @@ export const COMPANY_INFO = {
       id: 1,
       title: "Content Creation and Management",
       description: "Website design and development involves creating and maintaining a website.",
-      icon: <FaPencilAlt className="text-orange-500 text-4xl" />,
+      // icon: <FaPencilAlt className="text-orange-500 text-4xl" />,
+      image: '/images/global/service/10793.jpg'
     },
     {
       id: 2,
       title: "UI & UX Design and Branding",
       description: "Website design and development involves creating and maintaining a website.",
-      icon: <FaPaintBrush className="text-orange-500 text-4xl" />,
+      // icon: <FaPaintBrush className="text-orange-500 text-4xl" />,
+      image:''
     },
     {
       id: 3,
       title: "Website Design and Development",
       description: "Website design and development involves creating and maintaining a website.",
-      icon: <FaCode className="text-orange-500 text-4xl" />,
+      // icon: <FaCode className="text-orange-500 text-4xl" />,
+      image:''
     },
     {
       id: 4,
       title: "Search Engine Optimization",
       description: "The goal is to increase the quantity and quality of traffic to the website.",
-      icon: <FaSearch className="text-orange-500 text-4xl" />,
+      // icon: <FaSearch className="text-orange-500 text-4xl" />,
+      image:''
     },
     {
       id: 5,
       title: "Brand Experience Design",
       description: "Brand experience design is the process of creating meaningful interactions.",
-      icon: <FaChartBar className="text-orange-500 text-4xl" />,
+      // icon: <FaChartBar className="text-orange-500 text-4xl" />,
+      image:''
     },
     {
       id: 6,
       title: "Brand Strategy & Collateral Design",
       description: "Brand strategy is a long-term plan for the development of a successful brand.",
-      icon: <FaChessKnight className="text-orange-500 text-4xl" />,
+      // icon: <FaChessKnight className="text-orange-500 text-4xl" />,
+      image:''
     },
   ],
   portfolio: [

@@ -12,7 +12,7 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 export default function index() {
   return (
     <main className="all__pages">
-      {/* <Home/> */}
+      <Home/>
       <About/>
       <Services/>
       <TechStack/>
