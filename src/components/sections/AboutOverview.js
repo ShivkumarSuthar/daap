@@ -27,7 +27,7 @@ export default function About() {
                 <div className="row d-flex align-items-center about__page__inner m-0">
 
                   {/* Left Section */}
-                  <div className="p-0 col-md-6 col-sm-12 about__page__left">
+                  <div className="p-0 col-md-12 col-sm-12 about__page__left">
                     <div className="about__content">
                       <p>{COMPANY_INFO.aboutSection.description[0]}</p>
                       <p>{COMPANY_INFO.aboutSection.description[1]}</p>
@@ -38,7 +38,7 @@ export default function About() {
                   </div>
 
                   {/* Right Section - Two Images with Different CSS */}
-                  <div className="about__images col-md-6">
+                  <div className="about__images col-md-12 col-sm-12">
 
                     <div className="about__image__wrapper">
                       <Image

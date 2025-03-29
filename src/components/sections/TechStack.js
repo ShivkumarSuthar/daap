@@ -9,15 +9,15 @@
   const categoryListRef = useRef(null);
 
   // Auto-scroll effect without moving the page
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        (prevIndex + 1) % COMPANY_INFO.TECH_CATEGORIES.length
-      );
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrentIndex((prevIndex) =>
+  //       (prevIndex + 1) % COMPANY_INFO.TECH_CATEGORIES.length
+  //     );
+  //   }, 3000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // Update category without scrolling the page
   useEffect(() => {
@@ -55,12 +55,12 @@
         <div className="tech-stack-content">
           {/* Mobile Category Carousel */}
           <div className="mobile-category-carousel">
-            <button
+            {/* <button
               className="nav-button nav-left"
               onClick={() => navigateCategory('left')}
             >
               <FaChevronLeft />
-            </button>
+            </button> */}
 
             <div
               className="category-container"
@@ -77,20 +77,19 @@
               ))}
             </div>
 
-            <button
+            {/* <button
               className="nav-button nav-right"
               onClick={() => navigateCategory('right')}
             >
               <FaChevronRight />
-            </button>
+            </button> */}
           </div>
           <div className="tech-grid">
             {[
               ...(COMPANY_INFO.TECH_STACK[selectedCategory] || []),
               ...Array(8 - (COMPANY_INFO.TECH_STACK[selectedCategory]?.length || 0)).fill(null),
             ].map((tech, index) => (
-              <div key={index} className="tech-item">
-                <div className={`tech-box ${!tech ? 'placeholder' : ''}`}>
+                <div key={index} className={`tech-box ${!tech ? 'placeholder' : ''}`}>
                   {tech ? (
                     <>
                       <Image
@@ -106,7 +105,6 @@
                     <span className="placeholder-text">Coming Soon</span>
                   )}
                 </div>
-              </div>
             ))}
           </div>
         </div>

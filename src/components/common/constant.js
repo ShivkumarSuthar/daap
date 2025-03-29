@@ -135,15 +135,15 @@ bottomBrands: [
     utilityPages: ["Password Protected", "404 Not Found", "Style Guide", "Licenses", "Changelog"],
   },
   TECH_CATEGORIES : [
-    "Frontend Programming Languages",
+    "Frontend Technologies",
     "Backend Technologies",
     "Mobile Technologies",
     "Platforms",
     "Databases / Data Storage",
-    "DevOps Tools & Technologies",
+    "DevOps Stack",
   ],
   TECH_STACK : {
-    "Frontend Programming Languages": [
+    "Frontend Technologies": [
       "React",
       "Vue",
       "Angular",
@@ -191,7 +191,7 @@ bottomBrands: [
       "Cassandra",
       "Elasticsearch",
     ],
-    "DevOps Tools & Technologies": [
+    "DevOps Stack": [
       "Docker",
       "Kubernetes",
       "Kubernetes",

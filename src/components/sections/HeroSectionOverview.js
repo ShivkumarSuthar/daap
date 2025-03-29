@@ -44,7 +44,7 @@ export default function Home() {
         <div className="container-fluid">
           <div className="row g-4">
             {COMPANY_INFO.graphics.map((item) => (
-              <div key={item.id} className="col-12 col-md-6 col-lg-4 hero-card">
+              <div key={item.id} className="col-12 col-md-4 col-lg-3 hero-card">
                 <div className="portfolio-card">
                   <Image
                     src={item.image}
@@ -58,9 +58,8 @@ export default function Home() {
               </div>
             ))}
 
-            <div className="container text-container">
-              <div className="row justify-content-center">
-                <div className="col-12 col-md-6 col-lg-4">
+            
+                <div className="col-12 col-md-4 col-lg-3 hero-card">
                   <div className="card">
                     <div className="card-body">
                       <p className="text-card">
@@ -80,8 +79,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
           </div>
         </div>

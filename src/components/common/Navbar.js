@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="container">
+      <div className="container navbar__inner">
         {/* Left Part: Logo */}
         <Link href="/" className="navbar-brand">
         <span>DAP SOlution</span>
@@ -67,9 +67,9 @@ export default function Navbar() {
 
         {/* Right Part: Get Started Button */}
         <div>
-  <Link href="/get-a-quote" className="btn btn__get__started get__quote ms-3">
+  {/* <Link href="/get-a-quote" className="btn btn__get__started get__quote ms-3">
     Get a Quote
-  </Link>
+  </Link> */}
 </div>
 
       </div>

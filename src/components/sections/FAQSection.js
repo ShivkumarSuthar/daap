@@ -22,7 +22,7 @@ export default function FAQSection() {
 
   return (
     <div className="faq__wrapper">
-      <h2 className="text-center mb-4 faq__title">Frequently Asked Questions</h2>
+      <h2 className="text-center faq__title">Frequently Asked Questions</h2>
       <div className="faq__container">
         {faqData.map((faq, index) => (
           <div
