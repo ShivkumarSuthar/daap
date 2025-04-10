@@ -21,7 +21,7 @@ export default function Home() {
               </span>
               <span className="cta-wrapper">
                 <Link href="/get-started">
-                  <span className="btn get__started">Get In Touch</span>
+                  <span className="btn get__starte d">Get In Touch</span>
                 </Link>              
               </span>
               </span>
